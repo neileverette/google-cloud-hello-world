@@ -14,7 +14,7 @@ resources:
           #!/bin/bash
           apt-get update
           apt-get install -y apache2 php
-          echo "<?php echo '<h1>Hello World</h1><p>This works</p>'; ?>" > /var/www/html/index.php
+          echo "<?php echo '<h1>Hello World</h1><p></p>'; ?>" > /var/www/html/index.php
           systemctl restart apache2
     disks:
     - deviceName: boot

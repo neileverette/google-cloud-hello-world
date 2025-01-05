@@ -1,0 +1,6 @@
+imports:
+- path: https://raw.githubusercontent.com/neileverette/google-cloud-hello-world/main/minimal-vm-config.yaml
+
+resources:
+- name: minimal-vm
+  type: https://raw.githubusercontent.com/neileverette/google-cloud-hello-world/main/minimal-vm-config.yaml

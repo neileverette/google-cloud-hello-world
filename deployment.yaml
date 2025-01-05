@@ -1,0 +1,16 @@
+imports:
+- path: https://www.googleapis.com/cloud/deploymentmanager/v2/imports/compute
+
+resources:
+- name: test-vm
+  type: compute.v1.instance
+  properties:
+    zone: us-central1-c
+    machineType: zones/us-central1-c/machineTypes/f1-micro
+    disks:
+    - boot: true
+      autoDelete: true
+      initializeParams:
+        sourceImage: projects/debian-cloud/global/images/family/debian-11
+    networkInterfaces:
+    - network: global/networks/default

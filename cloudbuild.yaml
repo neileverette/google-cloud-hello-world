@@ -1,0 +1,9 @@
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: [
+    'deployment-manager', 
+    'deployments', 
+    'update', 
+    'minimal-vm-deployment', 
+    '--config=https://raw.githubusercontent.com/neileverette/google-cloud-hello-world/main/minimal-vm-config.yaml'
+  ]

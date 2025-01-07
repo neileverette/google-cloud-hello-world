@@ -3,7 +3,7 @@ resources:
   type: compute.v1.instance
   properties:
     zone: us-central1-a
-    machineType: zones/us-central1-a/machineTypes/f1-micro
+    machineType: zones/us-central1-a/machineTypes/g1-small
     tags:
       items:
       - http-server

@@ -7,3 +7,5 @@ steps:
     'minimal-vm-deployment', 
     '--config=https://raw.githubusercontent.com/neileverette/google-cloud-hello-world/main/minimal-vm-config.yaml'
   ]
+options:
+  defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET

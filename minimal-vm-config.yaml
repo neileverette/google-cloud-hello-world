@@ -7,7 +7,6 @@ resources:
     tags:
       items:
       - http-server
-      
     metadata:
       items:
       - key: startup-script
@@ -15,8 +14,13 @@ resources:
           #!/bin/bash
           apt-get update
           apt-get install -y apache2 php
-          echo "<?php echo '<h1>Hello World</h1><p></p>'; ?>" > /var/www/html/index.php
+          echo "<?php echo '<h1>Hello World</h1><p>This works</p>'; ?>" > /var/www/html/index.php
           systemctl restart apache2
+          
+          # Install the Google Cloud Ops Agent
+          curl -sSO https://dl.google.com/cloudagents/add-google-cloud-ops-agent-repo.sh
+          sudo bash add-google-cloud-ops-agent-repo.sh --also-install
+
     disks:
     - deviceName: boot
       type: PERSISTENT
